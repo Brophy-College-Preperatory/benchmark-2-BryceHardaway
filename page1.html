@@ -6,6 +6,50 @@
     <title>Website Name</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+             html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    background: #222;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.section1, .section2 {
+    width:100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.section1::before {
+    content: "";
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: url("images/MacInterface.webp") top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.0);
+    filter: blur(2px); 
+}
+.section2 {
+    background: rgb(68,35,19);
+}
+.text {
+    top:30%;
+    left:50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size: 15vw;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
         .macheader1 {
             font-family:'Gill Sans';
         }
@@ -43,6 +87,10 @@
 </head>
 <body style="background-color:rgba(68, 68, 68, 0.657)"></body>
 <body>
+     <div class="section1">
+        <header>
+        <h1 class="homeheader1">Mac vs Windows</h1>
+    </header>
     <header>
         <h1 class="macheader1">Mac Section</h1>
     </header>
@@ -70,7 +118,7 @@ src="https://www.youtube.com/embed/Uwmp16aSgdk">
         <section>
             <h2 class=""macheader3>Mac: Simple, clean user interface.</h2>
             <p class="macp4">macOS is known for its minimal, intuitive design that makes it easy to navigate—even for beginners. Features like the Dock, Mission Control, and Spotlight search help users find and switch between apps quickly. The consistent layout and smooth animations make the system feel organized and distraction-free. For many users, this clean interface reduces frustration and makes everyday tasks more enjoyable.</p>
-            <img src="images/MacInterface.webp" style="width:500px;height:300px;">
+            <img src="images/MacInterface.webp" style="width:128px;height:128px;">
         </section>
         <section>
             <h2 class="macheader4">Interesting Fact: Macs can run Windows using Boot Camp.</h2>
@@ -86,5 +134,6 @@ src="https://www.youtube.com/embed/Uwmp16aSgdk">
             </p>
         </section>
     </main>
+     </div>
 </body>
 </html>

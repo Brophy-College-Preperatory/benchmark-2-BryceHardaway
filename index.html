@@ -6,6 +6,51 @@
     <title>Website Name</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    background: #222;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.section1, .section2 {
+    width:100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.section1::before {
+    content: "";
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: url("images/WindowsInterface.webp") top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(2px);
+}
+.section2 {
+    background: rgb(68,35,19);
+}
+.text {
+    top:30%;
+    left:50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size: 15vw;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
+
         .homeheader1 {
             font-family:'Gill Sans';
         }
@@ -36,7 +81,8 @@
 </head>
 <body style="background-color:rgba(68, 68, 68, 0.657)"></body>
 <body>
-    <header>
+    <div class="section1">
+        <header>
         <h1 class="homeheader1">Mac vs Windows</h1>
     </header>
     <nav>
@@ -64,5 +110,8 @@
         <p class="homep3">Marques Brownlee, Created Tech, The Tech Chap, The Verge, and Chris Titus Tech
         </p>
     </footer>
+    
+    </div>
+    
 </body>
 </html>

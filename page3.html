@@ -6,37 +6,95 @@
     <title>Website Name</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        
+            html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    background: #222;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.section1, .section2 {
+    width:100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.section1::before {
+    content: "";
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background: url("images/macandwindows.jpg") top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.0);
+    filter: blur(2px); 
+}
+.section2 {
+    background: rgb(68,35,19);
+}
+.text {
+    top:30%;
+    left:50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size: 15vw;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transform: scale(1,1.1) translate(-50%, 10%);
+}
         .Prosheader1 {
             font-family:'Gill Sans';
+            color: white;
         }
         .Prosheader2 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosheader3 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosheader4 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosheader5 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosp1 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosp2 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosp3 {
             font-family:'Gill Sans';
+            color: white;
         }
         .prosp4 {
             font-family:'Gill Sans';
+            color: white;
         }
     </style>
 </head>
 <body style="background-color:rgba(68, 68, 68, 0.657)"></body>
 <body>
+    <div class="section1">
+        <header>
+        <h1 class="homeheader1"></h1>
+    </header>
     <header>
         <h1 class="Prosheader1">Pros of both Mac and Windows</h1>
     </header>
@@ -69,5 +127,6 @@
             <img src="images/macimage.webp" style="width:500px;height:300px;">
         </section>
     </main>
+    </div>
 </body>
 </html>
